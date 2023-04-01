@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Books</title>
+  </head>
+  <body>
+    <h1>Books</h1>
+    <form method="POST">
+      <label>User Name:</label>
+      <input type="text" name="user_name"><br><br>
+      <label>Book Name:</label>
+      <input type="text" name="book_name"><br><br>
+      <label>Author Name:</label>
+      <input type="text" name="author_name"><br><br>
+      <label>Genre:</label>
+      <input type="text" name="genre"><br><br>
+      <label>Rating:</label>
+      <input type="text" name="rating"><br><br>
+      <input type="submit" value="Add Book">
+    </form>
+    <br><br>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>User Name</th>
+    <th>Book Name</th>
+    <th>Author Name</th>
+    <th>Genre</th>
+    <th>Rating</th>
+  </tr>
+  {% for user in users %}
+  <tr>
+    <td>{{ user.id }}</td>
+    <td>{{ user.user_name }}</td>
+    <td>{{ user.book_name }}</td> 
+    <td>{{ user.author_name }}</td>
+    <td>{{ user.genre }}</td>
+    <td>{{ user.rating }} <a href="/delete/{{ user.id }}" class="btn btn-otline-danger btn-sm">Delete</a> </td>
+  </tr>
+  {% endfor %}
+</table>
+
+    <h2>Search Users</h2>
+    <form method="POST" action="/search">
+        <label for="name">User Name:</label>
+        <input type="text" id="name" name="user_name"><br><br>
+        <input type="submit" value="Search">
+    </form>
+  </body>
+</html>
+
+

@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>
+            login
+        </title>
+    </head>
+    <body>
+        {% if error %}
+        <h3>Error:</h3> {{ error }}
+        {% else %}
+        <form method="post">
+            <head>Log In</head>
+            <label>User name:</label>
+            <input type="text" user_name="username"> <br>
+            <label>Password:</label>
+            <input type="text" user_key="key"> <br>
+            <input type="submit" value="Login"> <br> 
+        </form>
+        {% endif %}
+    </body>
+</html>
