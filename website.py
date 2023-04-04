@@ -17,15 +17,18 @@ class Book(db.Model):
 def create_tables():
     db.create_all()
 
-@app.route('/', methods=['GET', 'POST'])
-def login():
-    error = None
-    if request.method == 'POST':
-        if request.form['username'] != 'n' and request.form['key'] != 'n':
-            error = 'Invalid credentials. Please try again.'
-        else:
-            return redirect('/books')
-    return render_template('login.html',error=error)
+@app.route('/')
+def admin_login():
+    return render_template('login.html')
+
+@app.route('/login', methods=['POST'])
+def admin_check():
+    admin_name = request.form.get('username')
+    admin_password = request.form.get('password')
+    if admin_name == 'mom' and admin_password == '2':
+       return redirect('/books')
+    else:
+        return render_template('login.html')
 
 @app.route('/books', methods=['GET', 'POST'])
 def index():

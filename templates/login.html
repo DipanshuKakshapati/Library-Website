@@ -5,17 +5,14 @@
         </title>
     </head>
     <body>
-        {% if error %}
-        <h3>Error:</h3> {{ error }}
-        {% else %}
-        <form method="post">
-            <head>Log In</head>
-            <label>User name:</label>
-            <input type="text" user_name="username"> <br>
-            <label>Password:</label>
-            <input type="text" user_key="key"> <br>
+        <form action='/login' method="post">
+            <label>User name:</label><br>
+            <input type="text" name = "username"> <br>
+             Password:<br>
+            <input type="password" name = "password"> <br><br>
             <input type="submit" value="Login"> <br> 
         </form>
-        {% endif %}
+        <h1> {{ msg }} </h1>
     </body>
 </html>
+
