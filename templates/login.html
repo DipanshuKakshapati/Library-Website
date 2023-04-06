@@ -1,18 +1,17 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            login
-        </title>
-    </head>
-    <body>
-        <form action='/login' method="post">
-            <label>User name:</label><br>
-            <input type="text" name = "username"> <br>
-             Password:<br>
-            <input type="password" name = "password"> <br><br>
-            <input type="submit" value="Login"> <br> 
-        </form>
-        <h1> {{ msg }} </h1>
-    </body>
+  <head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}" />
+  </head>
+  <body>
+    <form action="/login" method="post">
+      <label>User name:</label><br />
+      <input type="text" name="username" /><br />
+      Password:<br />
+      <input type="password" name="password" /><br /><br />
+      <input type="submit" value="Login" /><br />
+    </form>
+    <h1>{{ msg }}</h1>
+  </body>
 </html>
 
