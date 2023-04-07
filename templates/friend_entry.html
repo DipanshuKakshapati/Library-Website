@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Books</title>
+  </head>
+  <body>
+
+    <h1>Books</h1>
+
+    <form method="POST">
+      <label>User Name:</label>
+      <input type="text" name="user_name"><br><br>
+      <label>Book Name:</label>
+      <input type="text" name="book_name"><br><br>
+      <label>Author Name:</label>
+      <input type="text" name="author_name"><br><br>
+      <label>Genre:</label>
+      <input type="text" name="genre"><br><br>
+      <label>Rating:</label>
+      <input type="text" name="rating"><br><br>
+    </form>
+
+    <a href="{{ url_for('thank_you') }}">
+      <button type="button">Submit</button>
+    </a>
+
+  </body>
+
+</html>

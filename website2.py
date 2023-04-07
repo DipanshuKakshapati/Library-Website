@@ -21,13 +21,23 @@ def create_tables():
 def login():
     return render_template('login.html')
 
+@app.route('/thank_you')
+def thank_you():
+    return render_template('thank_you.html')
+
+@app.route('/add_books')
+def addmore():
+    return render_template('friend_entry.html')
+
 @app.route('/login', methods=['POST'])
 def admin_check():
     admin_name = request.form.get('username')
     admin_password = request.form.get('password')
     if admin_name == 'mom' and admin_password == '2':
        return redirect('/books')
-    else:
+    elif admin_name == 'dad' and admin_password == '1':
+        return redirect('/add_books')
+    else:    
         return render_template('login.html')
 
 @app.route('/books', methods=['GET', 'POST'])
