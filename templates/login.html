@@ -4,13 +4,15 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}" />
   </head>
   <body>
-    <form action="/login" method="post">
-      <label>User name:</label><br />
-      <input type="text" name="username" /><br />
-      Password:<br />
-      <input type="password" name="password" /><br /><br />
-      <input type="submit" value="Login" /><br />
-    </form>
+    <div class = "logiin">
+        <form action="/login" method="post">
+          <label>User name:</label>
+          <input type="text" autocomplete="off" name="username"/>
+          <label>Password:<br /></label>
+          <input type="password" name="password" /><br /><br />
+          <input type="submit" value="Login" /><br />
+        </form>
+    </div>
     <h1>{{ msg }}</h1>
   </body>
 </html>

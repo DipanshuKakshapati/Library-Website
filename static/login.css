@@ -1,7 +1,15 @@
 /* styles.css */
-body {
+.logiin {
+    width: 100%;
+    height: 100%;
+    background-color: black; /* fallback color */
+    background-image: url("book.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .logiin {
     font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
     display: flex;
     justify-content: center;
     align-items: center;
