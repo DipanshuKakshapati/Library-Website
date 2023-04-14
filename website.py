@@ -32,11 +32,15 @@ def admin_check():
     admin_name = request.form.get('username')
     admin_password = request.form.get('password')
     if admin_name == 'mom' and admin_password == '2':
-       return redirect('/books')
+       return redirect('/library')
     elif admin_name == 'dad' and admin_password == '1':
         return redirect('/add_books')
     else:    
         return render_template('login.html')
+
+@app.route('/library')
+def library():
+    return render_template('book.html')
 
 @app.route('/books', methods=['GET', 'POST'])
 def index():
