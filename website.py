@@ -23,10 +23,6 @@ def create_tables():
 def login():
     return render_template('login.html')
 
-@app.route('/add_books')
-def addmore():
-    return render_template('friend_entry.html')
-
 @app.route('/login', methods=['POST'])
 def admin_check():
     admin_name = request.form.get('username')
@@ -37,10 +33,15 @@ def admin_check():
         return redirect('/add_books')
     else:    
         return render_template('login.html')
+    
+@app.route('/add_books')
+def addmore():
+    return render_template('friend_entry.html')
 
 @app.route('/library')
 def library():
-    return render_template('book.html')
+    users = Book.query.all()
+    return render_template('book.html',users=users)
 
 @app.route('/books', methods=['GET', 'POST'])
 def index():
@@ -68,7 +69,7 @@ def delete(id):
     try:
         db.session.delete(user_to_delete)
         db.session.commit()
-        return redirect('/books')
+        return redirect('/library')
     except:
         return "There was a problem deleting that user...."
 
