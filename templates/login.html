@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title> Login Page</title>
+    <link rel="shortcot icon" href="{{ url_for('static', filename='Notes.jpeg') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}" />
   </head>
   <body>
-    <div class = "logiin">
+    <div class = "login">
         <form action="/login" method="post">
           <label>User name:</label>
           <input type="text" autocomplete="off" name="username"/>

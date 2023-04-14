@@ -3,10 +3,11 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="{{ url_for('static', filename='thank_you.css') }}" />
-        <title>Books</title>
+        <title>Thank You!</title>
+        <link rel="shortcot icon" href="{{ url_for('static', filename='Notes.jpeg') }}">
     </head>
     <body>
-        <h1> Thank You! </h1>
+        <h1> We are excited to read the book you <br> recommended and see what it's all about! </h1>
 
         <a href="{{ url_for('addmore') }}">
             <button type="button">Add More Books</button>

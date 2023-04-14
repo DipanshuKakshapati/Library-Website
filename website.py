@@ -15,15 +15,13 @@ class Book(db.Model):
 
 @app.before_first_request
 def create_tables():
-    db.create_all()
+    db.create_all() # checks whether the table exists or not, 
+                    # if does not exists creates the table, 
+                    # if exists then does not create a new table
 
 @app.route('/')
 def login():
     return render_template('login.html')
-
-@app.route('/thank_you')
-def thank_you():
-    return render_template('thank_you.html')
 
 @app.route('/add_books')
 def addmore():
@@ -54,7 +52,11 @@ def index():
         db.session.commit()
 
     users = Book.query.all()
-    return render_template('book.html', users=users)
+    return redirect('/thank_you')
+
+@app.route('/thank_you')
+def thank_you():
+    return render_template('thank_you.html')
 
 @app.route('/delete/<int:id>')
 def delete(id):
