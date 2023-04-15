@@ -17,6 +17,7 @@
         <th>Author Name</th>
         <th>Genre</th>
         <th>Rating</th>
+        <th>Status</th>
       </tr>
       {% for user in users %}
       <tr>
@@ -25,7 +26,8 @@
         <td>{{ user.book_name }}</td> 
         <td>{{ user.author_name }}</td>
         <td>{{ user.genre }}</td>
-        <td>{{ user.rating }} &ensp; &ensp; <a href="/delete/{{ user.id }}" class="btn btn-otline-danger btn-sm">Delete</a> </td>
+        <td>{{ user.rating }} </td>
+        <td><a href="/delete/{{ user.id }}" class="btn btn-otline-danger btn-sm">Update</a> </td>
       </tr>
       {% endfor %}
     </table>
@@ -38,5 +40,4 @@
     </form>
   </body>
 </html>
-
 
