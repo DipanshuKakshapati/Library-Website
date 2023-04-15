@@ -49,7 +49,7 @@ a {
 button {
   background-color: #235347;
   color: #8eb69b;
-  border: none;
+  border: 1px solid #235347;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
