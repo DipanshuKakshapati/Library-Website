@@ -1,6 +1,8 @@
 body {
   font-family: "Times New Roman", serif;
-  background-color: #f6f0e8;
+  background-image: url("images/Book.jpg");
+  background-size: cover;
+  background-position: center;
   color: #1e1e1e;
   padding: 30px;
 }

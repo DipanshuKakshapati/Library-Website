@@ -1,7 +1,9 @@
 body {
   font-family: "Times New Roman", serif;
-  background-color: #f6f0e8;
-  color: #1e1e1e;
+  background-image: url("images/Search.jpeg");
+  background-size: cover;
+  background-position: center;
+  color: #8a7e6d;
   padding: 30px;
 }
 
