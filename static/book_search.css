@@ -1,7 +1,7 @@
 body {
   font-family: "Times New Roman", serif;
-  background-image: url("images/search.jpjg");
-  background-size: cover;
+  background-image: url("images/search.jpg");
+  background-size: 100%;
   background-position: center;
   color: #8eb69b;
   padding: 30px;
@@ -56,9 +56,9 @@ input[type="text"] {
 
 input[type="submit"] {
   padding: 5px 10px;
-  border: 1px solid #1e1e1e;
-  background-color: #1e1e1e;
-  color: #f6f0e8;
+  border: 1px solid #18553575;
+  background-color: #8eb69b;
+  color: #8eb69b;
   border-radius: 5px;
   font-size: 14px;
   cursor: pointer;
