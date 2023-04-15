@@ -27,9 +27,9 @@ def login():
 def admin_check():
     admin_name = request.form.get('username')
     admin_password = request.form.get('password')
-    if admin_name == 'mom' and admin_password == '2':
+    if admin_name == 'Admin' and admin_password == '@dm1n':
        return redirect('/library')
-    elif admin_name == 'dad' and admin_password == '1':
+    elif admin_name == 'User' and admin_password == 'Us3r':
         return redirect('/add_books')
     else:    
         return render_template('login.html')
