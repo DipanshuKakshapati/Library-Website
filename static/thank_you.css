@@ -3,7 +3,7 @@ body {
     background-image: url("images/thankyou.jpg");
     background-size: 100%;
     background-position: top 10%;
-    color: #f0e9dc;
+    color: #daf1de;
     height: 100vh;
   }
 
@@ -11,7 +11,7 @@ body {
     margin-left: 100px;
     align-items: left;
     margin-top: 310px;
-    color: #f0e9dc;
+    color: #daf1de;
   }
   
   button {
@@ -20,13 +20,13 @@ body {
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 16px;
-    background-color: #7c7972;
-    color: white;
+    background-color: #235347;
+    color: #8eb69b;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
   
   button:hover {
-    background-color: #5a5a5a;
+    background-color:#163832;
   }
